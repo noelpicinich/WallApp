@@ -1,0 +1,104 @@
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+}
+
+.header {
+	background-color: rgb(62, 50, 239);
+	text-align: center;
+	margin-top: 0;
+	padding: 20px;
+}
+
+.header h1 {
+	font-family: 'Gochi Hand', cursive;
+	font-size: 50px;
+	float: left;
+	color: white;
+	display: inline-block;
+	margin: 10px;
+}
+
+.header ul li a {
+	font-family: 'Gochi Hand', cursive;
+	font-size: 25px;
+	padding: 10px;
+	margin: 10px;
+	float: right;
+	border-radius: 8px;
+	display: inline-block;
+	color: white;
+	text-decoration: none;
+}
+
+.header ul li a:hover {
+	background-color: white;
+	color: rgb(62, 50, 239);
+}
+
+.content{
+	margin: 30px;
+}
+
+.content h2 {
+	font-family: 'Gochi Hand', cursive;
+}
+
+.content ul {
+	list-style-type: none;
+	padding-left: 0px;
+}
+
+.content li a {
+	font-family: 'Raleway', sans-serif;
+	color: black;
+}
+
+.content p {
+	font-family: 'Raleway', sans-serif;
+	font-size: 20px;
+}
+
+.post {
+	font-family: 'Raleway', sans-serif;
+	color: black;
+	font-size: 20px;
+	text-align: left;
+	list-style-type: none;
+	margin-bottom: 8px;
+}
+
+.pub_date {
+	text-decoration: none;
+	padding-bottom: 25px;
+}
+
+button {
+	font-family: 'Gochi Hand', cursive;
+	background-color: rgb(62, 50, 239);
+	font-size: 25px;
+	padding: 10px;
+	margin-right: 15px;
+	float: left;
+	border-radius: 8px;
+	display: inline-block;
+	color: white;
+	text-decoration: none;
+	border: none;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+input {
+	border-radius: 12px;
+	border-style: solid;
+	border-color: #babdc1;
+}
+
+textarea {
+	border-radius: 12px;
+	border-style: solid;
+	border-color: #babdc1;
+}

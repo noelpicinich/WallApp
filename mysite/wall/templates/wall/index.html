@@ -1,0 +1,14 @@
+{% extends 'wall/base.html' %}
+
+{% block content %}
+	{% if latest_post_list %}
+		<ul>
+		{% for post in latest_post_list %}
+			<li class="post"><a href="{% url 'wall:detail' post.id %}">{{ post.post_text }}</a></li>
+			<li class="pub_date">{{ post.pub_date }}</li>
+		{% endfor %}
+		</ul>
+	{% else %}
+		<p>No posts are available.</p>
+	{% endif %}
+{% endblock %}

@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}The Wall{% endblock %}</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'wall/style.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Gochi+Hand|Raleway" rel="stylesheet">
+  </head>
+  <body>
+    <div class="header">
+      <ul class="nav">
+        {% if user.is_authenticated %}
+          <li class="nav-button"><a href="{% url 'wall:logout' %}">Logout</a></li>
+          <li class="nav-button"><a href="{% url 'wall:new_post' %}">Post</a></li>
+        {% else %}
+          <li class="nav-button"><a href="{% url 'wall:login' %}">Login</a></li> 
+          <li class="nav-button"><a href="{% url 'wall:signup' %}">Signup</a></li>
+        {% endif %}
+        <li class="nav-button" class="active" ><a href="{% url 'wall:home' %}">Home</a></li>
+        <h1 class="title">The Wall</h1>
+    </div>
+
+    <main class="content">
+      {% block content %}
+      {% endblock %}
+    </main>
+  </body>
+</html>
